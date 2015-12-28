@@ -1,0 +1,106 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>dubbo_provider</groupId>
+	<artifactId>dubbo_provider</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
+	<name>dubbo_provider</name>
+	<description>dubbo_provider</description>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<!-- <org.apache.spring.version>3.1.2.RELEASE</org.apache.spring.version> -->
+		<org.apache.spring.version>3.2.13.RELEASE</org.apache.spring.version>
+		<!-- <org.apache.spring.security.version>3.1.2.RELEASE</org.apache.spring.security.version> -->
+		<!-- <dubbo.version>2.5.3</dubbo.version> <zkclient.version>0.1</zkclient.version> -->
+		<!-- <zookeeper.version>3.4.5</zookeeper.version> -->
+		<package.environment>dubbo_console</package.environment>
+	</properties>
+	<dependencies>
+		<dependency>
+		 	<groupId>dubbo_api</groupId>
+	  		<artifactId>dubbo_api</artifactId>
+	  		<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<!-- <dependency>
+			<groupId>dubbo_provide</groupId>
+			<artifactId>dubbo_provide</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<scope>system</scope>
+			<systemPath>E:\eclipse\dubbo_provide\target\dubbo_provide-0.0.1-SNAPSHOT.jar</systemPath>
+		</dependency> -->
+		<!-- Spring -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${org.apache.spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context-support</artifactId>
+			<version>${org.apache.spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>${org.apache.spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${org.apache.spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.javassist</groupId>
+			<artifactId>javassist</artifactId>
+			<version>3.15.0-GA</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>dubbo</artifactId>
+			<version>2.5.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.zookeeper</groupId>
+			<artifactId>zookeeper</artifactId>
+			<version>3.4.6</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.github.sgroschupf</groupId>
+			<artifactId>zkclient</artifactId>
+			<version>0.1</version>
+		</dependency>
+	</dependencies>
+	<build>
+	<finalName>dubbo_console</finalName>
+	<plugins>
+	<!-- 打包 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.18.1</version>
+				
+				<configuration>
+					<skipTests>true</skipTests>
+				</configuration>
+			</plugin>
+			<!-- <plugin>
+				<groupId>org.mortbay.jetty</groupId>
+				<artifactId>maven-jetty-plugin</artifactId>
+				<version>6.0.0</version>
+				<configuration>
+					<contextPath>/dubbo_console</contextPath>
+					<reload>automatic</reload>
+					<scanIntervalSeconds>3</scanIntervalSeconds>
+					<connectors>
+						<connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
+							<port>8888</port>
+						</connector>
+					</connectors>
+				</configuration>
+			</plugin> -->
+	</plugins>
+	</build>
+</project>
