@@ -74,7 +74,7 @@
 		</dependency>
 	</dependencies>
 	<build>
-	<finalName>dubbo_console</finalName>
+	<finalName>dubbo_provider</finalName>
 	<plugins>
 	<!-- 打包 -->
 			<plugin>
