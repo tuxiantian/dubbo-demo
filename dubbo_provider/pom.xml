@@ -14,7 +14,7 @@
 		<!-- <org.apache.spring.security.version>3.1.2.RELEASE</org.apache.spring.security.version> -->
 		<!-- <dubbo.version>2.5.3</dubbo.version> <zkclient.version>0.1</zkclient.version> -->
 		<!-- <zookeeper.version>3.4.5</zookeeper.version> -->
-		<package.environment>dubbo_console</package.environment>
+		<package.environment>dubbo_provider</package.environment>
 	</properties>
 	<dependencies>
 		<dependency>
